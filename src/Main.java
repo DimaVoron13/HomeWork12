@@ -12,18 +12,20 @@ public class Main {
         System.out.println();
 
         Book castle = new Book(kafka, "Замок", 2020);
-        System.out.println("Автор - " + kafka.getAuthorsName() + " " + kafka.getAuthorsLastName());
+        System.out.println("Автор - " + castle.getAuthorName());
         System.out.println("Название книги - " + castle.getTitle());
         System.out.println("Год публикации - " + castle.getYearOfPublication());
         System.out.println();
 
         Book oneFlewOverTheCuckoosNest = new Book(kizi, "Над кукушкиным гнездом", 2020);
-        System.out.println("Автор - " + kizi.getAuthorsName() + " " + kizi.getAuthorsLastName());
+        System.out.println("Автор - " + oneFlewOverTheCuckoosNest.getAuthorName());
         System.out.println("Название книги - " + oneFlewOverTheCuckoosNest.getTitle());
         System.out.println("Год публикации - " + oneFlewOverTheCuckoosNest.getYearOfPublication());
         System.out.println();
 
         castle.setYearOfPublication(2021);
         System.out.println("Год публикации - " + castle.getYearOfPublication());
+        System.out.println();
+        System.out.println(castle.equals(oneFlewOverTheCuckoosNest));
     }
 }
